@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+  Login as Sulphuric Co-Ordinator!
+{% endblock title %}
+
+{% block content %}
+<section class="login">
+    <form class="login" action="" method="post">
+        {% csrf_token %} 
+        {% if not user.is_authenticated %}
+
+            <h1 class="loginas">{{message}}</h1>
+            {% if err %}
+                <div class="errorMessage">
+                    <p>{{error}}</p>
+                </div>
+            {% endif %} 
+            {% for fields in form %}
+                <div class="form-group">
+                    {{fields.label_tag}}
+                    {{fields}}
+                </div>
+            {% endfor %}
+            <input class="submit" type="submit" value="Login!">
+        {% else %}
+            <h1 class="loginas">You are already logged in, {{user.username.capitalize}}!</h1>
+        {% endif %}
+    </form>
+</section>  
+{% endblock content %}

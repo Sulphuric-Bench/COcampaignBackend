@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background: #182930;
+}
+
+header {
+  height: auto;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #53DEFD;
+  font-family: "Roboto Condensed", sans-serif;
+}
+header nav.campaignav a{
+  text-decoration: none;
+}
+header nav.campaignav {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #182930;
+}
+header nav.campaignav .left {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #53DEFD;
+}
+header nav.campaignav .left img.logopic {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+@media (max-width: 635px) {
+  header nav.campaignav .left img.logopic {
+    width: 50px;
+    height: 50px;
+  }
+}
+header nav.campaignav .left div.logowrites {
+  line-height: 30px;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+}
+@media (max-width: 635px) {
+  header nav.campaignav .left div.logowrites {
+    line-height: 15px;
+  }
+}
+@media (max-width: 320px) {
+  header nav.campaignav .left div.logowrites {
+    display: none;
+  }
+}
+header nav.campaignav .left div.logowrites p.sulphuricbench {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+}
+@media (max-width: 635px) {
+  header nav.campaignav .left div.logowrites p.sulphuricbench {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+}
+header nav.campaignav .left div.logowrites p.coordinatorcampaign {
+  font-size: 1.5em;
+  color: white;
+  letter-spacing: 7.5px;
+  font-variant: small-caps;
+}
+@media (max-width: 635px) {
+  header nav.campaignav .left div.logowrites p.coordinatorcampaign {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+}
+header nav.campaignav .right ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+header nav.campaignav .right ul li {
+  background: #53DEFD;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+@media (max-width: 390px) {
+  header nav.campaignav .right ul li {
+    padding: 10px 6px;
+  }
+}
+header nav.campaignav .right ul li a {
+  text-decoration: none;
+  color: #182930;
+  background: #53DEFD;
+  font-family: "Roboto Condensed", sans-serif;
+}
+header nav.campaignav .right ul li:hover {
+  box-shadow: 0px 0px 10px #53DEFD;
+  transition: 1s;
+  cursor: pointer;
+}
+header nav.campaignav .right ul li:nth-child(2) {
+  margin-left: 20px;
+}
+@media (max-width: 390px) {
+  header nav.campaignav .right ul li:nth-child(2) {
+    margin-left: 6px;
+  }
+}
+
+section.campaign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+section.campaign div.card {
+  box-shadow: 0px 0px 10px #53DEFD;
+  width: 80%;
+  display: block;
+  padding: 30px 50px;
+  background: #53DEFD;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+section.campaign div.card h1.welcome {
+  background: #53DEFD;
+  color: #182930;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+section.campaign div.card ol {
+  background: #53DEFD;
+}
+section.campaign div.card ol h4.read {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #53DEFD;
+  color: #182930;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+section.campaign div.card ol li {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #53DEFD;
+  color: #182930;
+}
+
+section.registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+section.registration form.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px #53DEFD;
+  width: 50%;
+  padding: 30px 50px;
+  background: #53DEFD;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+@media (max-width: 720px) {
+  section.registration form.registration {
+    width: 80%;
+  }
+}
+section.registration form.registration div.errorMessage {
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  background: #182930;
+  color: #53DEFD;
+  margin-bottom: 20px;
+  font-family: "Space Mono", monospace;
+}
+section.registration form.registration h1.join {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #53DEFD;
+  color: #182930;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+section.registration form.registration .form-group {
+  background: #53DEFD;
+  margin-bottom: 20px;
+  width: 100%;
+}
+section.registration form.registration .form-group label {
+  background: #53DEFD;
+  color: #182930;
+  display: block;
+  font-size: 1.2em;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 5px;
+}
+section.registration form.registration .form-group input {
+  width: 90%;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #182930;
+  color: #53DEFD;
+  outline: 1px solid #53DEFD;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 10px;
+}
+section.registration form.registration input.submit {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #182930;
+  color: #53DEFD;
+  border-radius: 5px;
+  padding: 10px 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+section.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+section.login form.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px #53DEFD;
+  width: 50%;
+  padding: 30px 50px;
+  background: #53DEFD;
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+@media (max-width: 720px) {
+  section.login form.login {
+    width: 80%;
+  }
+}
+section.login form.login div.errorMessage {
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+  background: #182930;
+  color: #53DEFD;
+  margin-bottom: 20px;
+  font-family: "Space Mono", monospace;
+}
+section.login form.login h1.loginas {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #53DEFD;
+  color: #182930;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+section.login form.login .form-group {
+  background: #53DEFD;
+  margin-bottom: 20px;
+  width: 100%;
+}
+section.login form.login .form-group label {
+  background: #53DEFD;
+  color: #182930;
+  display: block;
+  font-size: 1.2em;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 5px;
+}
+section.login form.login .form-group input {
+  width: 90%;
+  font-size: 1.2em;
+  padding: 10px 6px;
+  border-radius: 10px;
+  background: #182930;
+  color: #53DEFD;
+  outline: 1px solid #53DEFD;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 10px;
+}
+section.login form.login input.submit {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #182930;
+  color: #53DEFD;
+  border-radius: 5px;
+  padding: 10px 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Roboto Condensed", sans-serif;
+  border-top: 2px solid #53DEFD;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #182930;
+  padding: 30px 50px;
+}
+@media (max-width: 720px) {
+  footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 720px) {
+  footer .column1 {
+    margin-bottom: 50px;
+  }
+}
+footer .column1 .logocontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #53DEFD;
+  margin-bottom: 50px;
+}
+footer .column1 .logocontainer img.logopic {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+@media (max-width: 635px) {
+  footer .column1 .logocontainer img.logopic {
+    width: 50px;
+    height: 50px;
+  }
+}
+footer .column1 .logocontainer div.logowrites {
+  line-height: 30px;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+}
+@media (max-width: 635px) {
+  footer .column1 .logocontainer div.logowrites {
+    line-height: 15px;
+  }
+}
+footer .column1 .logocontainer div.logowrites p.sulphuricbench {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+}
+@media (max-width: 1080px) {
+  footer .column1 .logocontainer div.logowrites p.sulphuricbench {
+    font-size: 1.5em;
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 635px) {
+  footer .column1 .logocontainer div.logowrites p.sulphuricbench {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+}
+
+footer .column1 .logocontainer div.logowrites p.coordinatorcampaign {
+  font-size: 1.5em;
+  color: white;
+  letter-spacing: 7.5px;
+  font-variant: small-caps;
+}
+@media (max-width: 1080px) {
+  footer .column1 .logocontainer div.logowrites p.coordinatorcampaign {
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 635px) {
+  footer .column1 .logocontainer div.logowrites p.coordinatorcampaign {
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+}
+footer .column1 .contactcontainer h2.contact,
+footer .column1 .contactcontainer p.contactp {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #53DEFD;
+  margin-bottom: 10px;
+}
+footer .column1 .contactcontainer h2.contact svg,
+footer .column1 .contactcontainer p.contactp svg {
+  fill: #53DEFD;
+}
+footer .column1 .contactcontainer h2.contact {
+  margin-bottom: 10px;
+}
+footer .column1 div.right ul.footer {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 30px;
+}
+footer .column1 div.right ul.footer li.footerlist {
+  margin-right: 20px;
+}
+footer .column1 div.right ul.footer li.footerlist a.sociallink svg {
+  fill: #53DEFD;
+}
+footer .column2 {
+  width: 60%;
+}
+@media (max-width: 720px) {
+  footer .column2 {
+    width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  footer .column2 {
+    display: none;
+  }
+}
+footer .column2 h2, footer .column2 p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #53DEFD;
+  margin-bottom: 10px;
+}
+footer .column2 p.cpyright {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  color: #53DEFD;
+}
+footer .column2 p.cpyright a {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  color: #53DEFD;
+}
+
+/*# sourceMappingURL=styles.css.map */
