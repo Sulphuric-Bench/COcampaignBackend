@@ -84,32 +84,32 @@ header nav.campaignav .right ul {
   align-items: center;
   list-style: none;
 }
-header nav.campaignav .right ul li {
+header nav.campaignav .right ul a li {
   background: #53DEFD;
   border-radius: 5px;
   padding: 10px 20px;
 }
 @media (max-width: 390px) {
-  header nav.campaignav .right ul li {
+  header nav.campaignav .right ul a li {
     padding: 10px 6px;
   }
 }
-header nav.campaignav .right ul li a {
+header nav.campaignav .right ul a li{
   text-decoration: none;
   color: #182930;
   background: #53DEFD;
   font-family: "Roboto Condensed", sans-serif;
 }
-header nav.campaignav .right ul li:hover {
+header nav.campaignav .right ul a:hover li {
   box-shadow: 0px 0px 10px #53DEFD;
   transition: 1s;
   cursor: pointer;
 }
-header nav.campaignav .right ul li:nth-child(2) {
+header nav.campaignav .right ul a:nth-child(2){
   margin-left: 20px;
 }
 @media (max-width: 390px) {
-  header nav.campaignav .right ul li:nth-child(2) {
+  header nav.campaignav .right ul a:nth-child(2){
     margin-left: 6px;
   }
 }
@@ -178,7 +178,7 @@ section.registration form.registration {
 }
 section.registration form.registration div.errorMessage {
   width: 90%;
-  padding: 20px;
+  padding: 20px 40px;
   border-radius: 20px;
   background: #182930;
   color: #53DEFD;
@@ -281,7 +281,7 @@ section.login form.login .form-group label {
 section.login form.login .form-group input {
   width: 90%;
   font-size: 1.2em;
-  padding: 10px 6px;
+  padding: 10px 20px;
   border-radius: 10px;
   background: #182930;
   color: #53DEFD;

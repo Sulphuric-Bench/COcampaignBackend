@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block title %}
-  Login as Sulphuric Co-Ordinator!
+  Join as Sulphuric Co-Ordinator!
 {% endblock title %}
 
 {% block content %}
 <section class="registration">
-    <form class="registration" action="" method="post">
+    <form class="registration" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <h1 class="join">Join as Co-ordinator!</h1>
         {% if err %}

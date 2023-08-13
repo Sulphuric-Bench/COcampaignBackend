@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from coordinatorform.models import coOrdinator
+from coordinatorform.models import Coordinator
 from coordinatorform.forms import RegisterPage
 # Register your models here.
 class CustomUserAdmin(UserAdmin):
-    model = coOrdinator
+    model = Coordinator
     add_form = RegisterPage
     fieldsets = (
         *UserAdmin.fieldsets,
@@ -19,14 +19,17 @@ class CustomUserAdmin(UserAdmin):
                     'school',
                     'college',
                     'contact',
-                    'address',
-                    'upazila',
+                    'praddress',
+                    'peraddress',
+                    'facebook',
+                    'picture',
                     'district',
-                    'exp',
+                    'experience',
+                    'skills',
+                    'interests',
                 )
             }
         )
     )
-
-
-admin.site.register(coOrdinator, CustomUserAdmin)
+    list_display = ["username", "image_tag", "email", "nickname", "is_staff"]
+admin.site.register(Coordinator, CustomUserAdmin)
