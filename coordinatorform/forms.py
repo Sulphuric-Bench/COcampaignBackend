@@ -24,7 +24,7 @@ class LoginPage(forms.Form):
 class RegisterPage(UserCreationForm):
     class Meta:
         model = Coordinator
-        fields = ("fullname", "nickname", "dateofbirth", "religion", "school", "college", "email", "contact", "praddress", "peraddress", "district", "facebook", "picture", "experience", "skills", "interests", "username")
+        fields = ("fullname", "nickname", "dateofbirth", "religion", "school", "college", "email", "contact", "praddress", "peraddress", "district", "facebook", "instagram", "twitter", "whatsapp", "linkedin", "picture", "experience", "skills", "interests", "username")
         labels = {
             'fullname': 'Full Name',
             "nickname": "Nickname",
@@ -37,11 +37,15 @@ class RegisterPage(UserCreationForm):
             "praddress": "Present Address",
             "peraddress": "Permanent Address",
             "district": "District",
-            "facebook": "Facebook Profile",
+            "facebook": "Facebook Profile Link",
+            "instagram": "Instagram Profile Link",
+            "twitter": "Twitter Profile Link",
+            "whatsapp": "Whatsapp Messenger Link",
+            "linkedin": "Linkedin Profile Link",
             "picture": "Upload your profile picture [300px X 300px]",
-            "experience": "Experiences [Separate them with semicolons]",
-            "skills": "Skills [Separate them with semicolons]",
-            "interests": "Interests [Separate them with semicolons]",
+            "experience": "Experiences [One experience in each line]",
+            "skills": "Skills [One skill in each line]",
+            "interests": "Interests [One interest in each line]",
             "username": "Username",
         }
         widgets = {
@@ -54,12 +58,16 @@ class RegisterPage(UserCreationForm):
             'contact': widgets.TextInput(attrs={'placeholder':'+8801345678910'}),
             'religion': widgets.TextInput(attrs={'placeholder':'Islam/Hinduism/Christianity/Buddhism'}),
             'district': widgets.TextInput(attrs={'placeholder':'Your District'}),
-            'facebook': widgets.TextInput(attrs={'placeholder':'Your facebook profile link'}),
+            'facebook': widgets.TextInput(attrs={'placeholder':'Your facebook profile link', 'onfocus':'this.value=""'}),
+            'instagram': widgets.TextInput(attrs={'placeholder':'Your instagram profile link (Optional)', 'onfocus':'this.value=""'}),
+            'twitter': widgets.TextInput(attrs={'placeholder':'Your twitter profile link (Optional)', 'onfocus':'this.value=""'}),
+            'whatsapp': widgets.TextInput(attrs={'placeholder':'Your whatsapp profile link (Optional)', 'onfocus':'this.value=""'}),
+            'linkedin': widgets.TextInput(attrs={'placeholder':'Your linkedin profile link (Optional)', 'onfocus':'this.value=""'}),
             'praddress': widgets.TextInput(attrs={'placeholder':'House, Road, Thana, Area, Upazila'}),
             'peraddress': widgets.TextInput(attrs={'placeholder':'House, Road, Thana, Area, Upazila'}),
-            'experience': widgets.TextInput(attrs={'placeholder':'Organizations you previously worked or currently working'}),
-            'skills': widgets.TextInput(attrs={'placeholder':'Your Skills'}),
-            'interests': widgets.TextInput(attrs={'placeholder':'Your Interests'}),
+            'experience': widgets.Textarea(attrs={'placeholder':'Organizations you previously worked or currently working '}),
+            'skills': widgets.Textarea(attrs={'placeholder':'Your Skills'}),
+            'interests': widgets.Textarea(attrs={'placeholder':'Your Interests'}),
             'username': widgets.TextInput(attrs={'placeholder':'Enter a username'}),
         }
     

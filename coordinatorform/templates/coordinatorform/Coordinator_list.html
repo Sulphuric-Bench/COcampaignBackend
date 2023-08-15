@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    {{coordinator.username}} | Co-Ordinator at Sulphuric Bench
+{% endblock title %}
+
+{% block navbarbuttons %}
+    <a href="{% url 'administrationofcoordinators' %}"><li>List of Coordinators</li></a>
+{% endblock navbarbuttons %}
+
+{% block content %}
+    {% if perms.coordinatorform.coordinator %}
+        <section class="Administration">
+            <div class="container">
+                <h1>Administration Page</h1>
+                <ol>
+                    {% for coordinator in coordinator_list %}
+                        <a href="/administrationpage/coordinators/details/{{coordinator.id}}"><li>{{coordinator.username}}</li></a>
+                    {% endfor %}
+                </ol>
+            </div>
+        </section>
+    {% else %}
+        <section class="Administration">
+            <div class="container">
+                <h1>You don't have permission to view this page.  Go back to <a href="{% url 'Home' %}">Home Page</a></h1>
+            </div>
+        </section>
+    {% endif %}
+{% endblock content %}

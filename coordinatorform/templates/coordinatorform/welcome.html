@@ -1,21 +1,66 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
   Welcome to CO-Ordinator Campaign
 {% endblock title %}
 {% block content %}
-<section class="campaign">
-    <div class="card">
-       <h1 class="welcome">Welcome!</h1>
-        <br><ol class="orderlist">
-            <h4 class="read">Read the instructions before you fill out the form:</h4>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium iure at reiciendis temporibus? Suscipit architecto eveniet natus aliquid dolores.</li>
-        </ol> 
+<section class="body">
+    <div class="first-part">
+        <div class="left-part">
+            <h1 class="hightime">
+                It's high time <br> to welcome our <br> School Co-ordinators
+            </h1>
+            <p class="recruit">We're recruiting few co-ordinator to represent their institute <br> and enrich some of their eternal qualities</p>
+        </div>
+        <div class="right-part">
+            <img src="{% static 'coordinatorform/campuscoordinator.png' %}" alt="Campus Coordinator Campaign logo">
+        </div>
+    </div>
+    <div class="second-part">
+        <div class="heading">
+            <h1>Facilities we provide</h1>
+            <p>As you're the future of the country and representative of our platform as well,we're highly concerned about your betterment.So we're offering some tremendous skill up facilities for you.</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="{% static 'coordinatorform/book.png' %}" alt="ABC logo">
+                <h2>Academic Support</h2>
+                <p>Mentorship and Study Material to reach your academic success.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'coordinatorform/abc.png' %}" alt="Books">
+                <h2>English Fundamentals</h2>
+                <p>To increase your communication skill</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'coordinatorform/creatives.png' %}" alt="Creatives">
+                <h2>Creative Hunt</h2>
+                <p>To bloom creativity inside yourself</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'coordinatorform/programminglogo.png' %}" alt="ABC logo">
+                <h2>Programming Hunt</h2>
+                <p>To introduce you with the language of Computer</p>
+            </div>
+        </div>
+    </div>
+    <div class="third-part">
+        <div class="left-part">
+            <div class="one"></div>
+            <div class="two">
+                <img src="{% static 'coordinatorform/plan.png' %}" alt="plan">
+            </div>
+            <div class="three">
+                <img src="{% static 'coordinatorform/manpower.png' %}" alt="manpower">
+            </div>
+            <div class="four"></div>
+        </div>
+        <div class="right-part">
+            <h1>Let's talk about <br> your goal here</h1>
+            <p>Sulphuric Bench is working for a revolution in education. In this era, just academic excellence isn't enough for anyone, so we're working to build the infrastructure of modern education.</p>
+            <br>
+            <p>In this revolution, you'll be our face toward your institution. Your task is to introduce us to your institute as well as your surroundings. This is your foremost duty rest case, you'll be announced after joining.</p>
+        </div>
     </div>
 </section>
 {% endblock content %}

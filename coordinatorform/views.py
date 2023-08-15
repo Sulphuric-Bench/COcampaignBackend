@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from .forms import LoginPage, RegisterPage
 from django.contrib.auth import login, authenticate
 from .models import Coordinator
+from django.views.generic import ListView, DetailView
 # Create your views here.
 def homeView(request):
     return render(request, 'coordinatorform/welcome.html') #templates\coordinatorform
@@ -46,27 +47,52 @@ def register_page(request):
     else:
         form = RegisterPage()
     return render(request, 'coordinatorform/register.html', context={'form':form, 'error':error, 'err':err})
-
-
 def ProfileView(request):
     userData = request.user
     user = {
-        "fullname" : userData.fullname,
-        "nickname" : userData.nickname,
-        "dateofbirth" : userData.dateofbirth,
-        "religion" : userData.religion,
-        "school" : userData.school,
-        "college" : userData.college,
-        "email" : userData.email,
-        "contact" : userData.contact,
-        "praddress" : userData.praddress,
-        "peraddress" : userData.peraddress,
-        "district" : userData.district,
-        "facebook" : userData.facebook,
-        "picture" : userData.picture,
-        "experience" : list(userData.experience.split(";")) if userData.experience != None else userData.experience,
-        "skills" : list(userData.skills.split(";")) if userData.skills != None else userData.skills,
-        "interests" : list(userData.interests.split(";")) if userData.interests != None else userData.interests,
-        "username" : userData.username,
+        "fullname": userData.fullname,
+        "nickname": userData.nickname,
+        "dateofbirth": userData.dateofbirth,
+        "religion": userData.religion,
+        "school": userData.school,
+        "college": userData.college,
+        "email": userData.email,
+        "contact": userData.contact,
+        "praddress": userData.praddress,
+        "peraddress": userData.peraddress,
+        "district": userData.district,
+        "facebook": userData.facebook
+        if userData.facebook.find("https://") != -1
+        else f"https://{userData.facebook}",
+        "instagram": userData.instagram
+        if userData.instagram.find('https://') != -1
+        else f"https://{userData.instagram}",
+        "twitter": userData.twitter
+        if userData.twitter.find('https://') != -1
+        else f"https://{userData.twitter}",
+        "whatsapp": userData.whatsapp
+        if userData.whatsapp.find('https://') != -1
+        else f"https://{userData.whatsapp}",
+        "linkedin": userData.linkedin
+        if userData.linkedin.find('https://') != -1
+        else f"https://{userData.linkedin}",
+        "picture": userData.picture,
+        "experience": sorted(list(userData.experience.split("\r\n")))
+        if userData.experience != None
+        else userData.experience,
+        "skills": sorted(list(userData.skills.split("\r\n")))
+        if userData.skills != None
+        else userData.skills,
+        "interests": sorted(list(userData.interests.split("\r\n")))
+        if userData.interests != None
+        else userData.interests,
+        "username": userData.username,
     }
     return render(request, 'coordinatorform/profile.html', context={'data':user})
+
+class CoordinatorListView(ListView):
+    model = Coordinator
+    context_object_name = 'coordinator_list'
+class CoordinatorDetailView(DetailView):
+    model = Coordinator
+    
