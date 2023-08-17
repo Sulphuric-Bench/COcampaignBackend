@@ -40,7 +40,7 @@ def register_page(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('Home')
+            return redirect('profile')
         else:
             err = True
             error = 'Please fix the errors.'
